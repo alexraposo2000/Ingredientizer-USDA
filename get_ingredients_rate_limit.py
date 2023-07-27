@@ -1,11 +1,7 @@
-"""USER: to input your descired foods, see the list at the bottom called test_foods.
-To run, open your terminal and type 'python get_ingredients.py, then follow the prompts.'"""
-
 import re
 import openai
 import pandas as pd
 openai.api_key = 'YOUR_API_KEY'
-# openai.api_key = input('Please type your ChatGPT API key: ')
 import time
 
 def get_ingredients(test_food,yes_no, stop_words = [], simplify=False):
@@ -92,7 +88,6 @@ if int(yes_no) ==0:
     simplify= input('Great, would you like to select the level of detail of ingredient names or default to greater detail? Type a number: 0 - I want to make selections, 1 - add detail for me')
 
 # BEGIN USER CUSTOMIZE ZONE * type all words in lower case without punctuation *
-
 
 original_test_foods = ['soup cream of asparagus canned condensed',
  'soup bean with pork canned condensed',

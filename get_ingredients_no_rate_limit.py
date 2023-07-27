@@ -1,6 +1,3 @@
-"""USER: to input your descired foods, see the list at the bottom called test_foods.
-To run, open your terminal and type 'python get_ingredients.py, then follow the prompts.'"""
-
 import re
 import openai
 import pandas as pd
@@ -95,8 +92,24 @@ if int(yes_no) ==0:
 
 # BEGIN USER CUSTOMIZE ZONE * type all words in lower case without punctuation *
 
-test_foods = ['multigrain cheerios']
-custom_stop_words = ['vitamin a']
+test_foods = ['soup cream of asparagus canned condensed',
+ 'soup bean with pork canned condensed',
+ 'soup beef broth or bouillon canned ready to serve',
+ 'soup beef noodle canned condensed',
+ 'soup cream of celery canned condensed',
+ 'soup cheese canned condensed',
+ 'soup chicken broth canned condensed',
+ 'soup chicken canned chunky ready to serve',
+ 'soup cream of chicken canned condensed',
+ 'soup chunky chicken noodle canned ready to serve',
+ 'soup chicken noodle canned condensed',
+ 'soup clam chowder new england canned prepared with equal volume water',
+ 'soup cream of mushroom canned prepared with equal volume water',
+ 'soup pea green canned prepared with equal volume water',
+ 'soup cream of shrimp canned prepared with equal volume water',
+ 'soup tomato beef with noodle canned prepared with equal volume water']
+
+custom_stop_words = ['canned', 'condensed', 'baked', 'commercially', 'prepared', 'ready', 'to', 'eat', 'include', 'includes', 'with']
 
 # END USER CUSTOMIZE ZONE
 ingredients_list = [get_ingredients(f,int(yes_no),stop_words = custom_stop_words, simplify = int(simplify)) for f in test_foods]
