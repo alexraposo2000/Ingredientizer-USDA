@@ -4,7 +4,8 @@ To run, open your terminal and type 'python get_ingredients.py, then follow the 
 import re
 import openai
 import pandas as pd
-openai.api_key = input('Please type your ChatGPT API key: ')
+openai.api_key = 'YOUR_API_KEY'
+# openai.api_key = input('Please type your ChatGPT API key: ')
 import time
 
 def get_ingredients(test_food,yes_no, stop_words = [], simplify=False):
